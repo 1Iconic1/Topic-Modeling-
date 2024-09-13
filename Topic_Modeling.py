@@ -83,7 +83,7 @@ class LDA:
 lda_model = LDA(num_topics=2)
 
 lda_model.fit(data)
-print('almost done')
+print('finished fitting...')
 
 # results
 df_doc_topic, df_topic_word, topic_assignments, vocabulary,topic_dist,topic_counts = lda_model.get_results()
@@ -102,7 +102,7 @@ topic = list(topic_counts.keys())
 titles = [val for val in list(topic_counts.values())]
 
     
-print('nearly done')
+print('creating topic assignments...')
 
 plt.figure(figsize=(8, 6))
 plt.bar(topic,titles)
