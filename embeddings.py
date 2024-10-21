@@ -42,7 +42,7 @@ class Embeddings:
             return np.zeros_like(self.embeddings['random'])
         doc_embedding = np.sum(vectors)# axis=0
         return doc_embedding
-
+    #finds the most similar based on cosine similarity of each document
     def most_similar(self, doc, data):
 
         #doc1 = self.doc_embeddings(doc)
@@ -56,7 +56,7 @@ class Embeddings:
 
 
 vec =  Embeddings()
-
+#test cases on 3 article titles
 test_articles= ['Extensive-Form Game Solving via Blackwell Approachability on Treeplexes','Towards Trust and Reputation as a Service in a Blockchain-based Decentralized Marketplace','Fair Artificial Currency Incentives in Repeated Weighted Congestion Games: Equity vs. Equality']
 for title in test_articles:
     data = vec.most_similar(title.lower(), file['title'])
